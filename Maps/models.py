@@ -43,3 +43,12 @@ class TestGeo(models.Model):
 
     def __str__(self):
         return 'Name: %s' % self.name
+
+
+class Zipcode(models.Model):
+    code = models.CharField(max_length=5)
+    poly = models.PolygonField()
+
+class Elevation(models.Model):
+    name = models.CharField(max_length=100)
+    rast = models.RasterField()
