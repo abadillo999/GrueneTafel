@@ -23,7 +23,7 @@ from django.contrib.gis import admin
 urlpatterns = [
 
     url(r'^', include('Database.urls')),
-    url(r'^', include('Maps.urls')),
+    url(r'^', include('Admin.urls')),
     
 ]
 
