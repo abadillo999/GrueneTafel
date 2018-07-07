@@ -6,4 +6,6 @@ from .models import WorldBorder
 
 admin.site.register(WorldBorder, admin.GeoModelAdmin)
 
+#admin.site.register(WorldBorder, admin.OSMGeoAdmin)
+
 # Register your models here.

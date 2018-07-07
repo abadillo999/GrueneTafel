@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'MapsDB',
         'USER': 'badi',
-        'PASSWORD': 'badi',
+        'PASSWORD': 'badi', 
         'HOST': 'localhost',     
     }
 
