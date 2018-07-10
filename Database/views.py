@@ -8,7 +8,8 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from Database.models import Layer
 from Database.serializers import *
-
+from django.template import Template, Context
+import datetime
 
 class JSONResponse(HttpResponse):
     """
@@ -66,3 +67,17 @@ def layer_detail(request, pk):
     elif request.method == 'DELETE':
         layer.delete()
         return HttpResponse(status=204)
+
+@csrf_exempt
+def mapas(request):
+    """
+    List all code serie, or create a new serie.
+    """
+    if request.method == 'GET':
+        #template = loader.get_template("Database/mapa.html")
+        fp = open('/home/badillo/grunetafel/grunetafel/gruenetafel/Database/mapaGoogle.html')
+        t = Template(fp.read())
+        fp.close()
+
+        html = t.render(Context({'current_date': datetime.datetime.now()}))
+        return HttpResponse(html)
