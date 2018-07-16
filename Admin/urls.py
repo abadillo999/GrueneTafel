@@ -1,4 +1,4 @@
-from django.contrib.gis import admin
+from django.contrib import admin
 from django.conf.urls import *
 from Database import views
 
