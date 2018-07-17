@@ -25,7 +25,7 @@ SECRET_KEY = 'zu!cu(#$78o%=$xkx3y7b9dnr=7o*7b(*bh9n0#df$0q-2xfvh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
