@@ -75,7 +75,7 @@ def mapas(request):
     """
     if request.method == 'GET':
         #template = loader.get_template("Database/mapa.html")
-        fp = open('/home/badillo/grunetafel/grunetafel/GrueneTafel/Database/mapaGoogle.html')
+        fp = open('/code/GrueneTafel/Database/mapaGoogle.html')
         t = Template(fp.read())
         fp.close()
 
